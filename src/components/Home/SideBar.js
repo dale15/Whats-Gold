@@ -6,17 +6,18 @@ class SideBar extends Component {
   render() {
     return (
       <Container>
-          <Content style={{
-                  backgroundColor: "#e5be42"
-              }}>
-                  <Text
-                      style = {{
-                          marginTop: 10,
-                          color: "#FFFFFF",
-                          fontSize: 16,
-                          fontWeight: "bold"
-                      }} >
-                  </Text>
+          <Content style={{ backgroundColor: "#e5be42" }}>
+                  <List>
+                    <ListItem style = {{backgroundColor: 'transparent', marginLeft: 15}}>
+                      <View>
+                        <Text style = {{ marginTop: 30, color: "#FFFFFF", fontSize: 16, fontWeight: "bold" }}> Home </Text>
+                        <Text style = {{ marginTop: 30, color: "#FFFFFF", fontSize: 16, fontWeight: "bold" }}> Record </Text>
+                        <Text style = {{ marginTop: 30, color: "#FFFFFF", fontSize: 16, fontWeight: "bold" }}> About Us </Text>
+                        <Text style = {{ marginTop: 30, color: "#FFFFFF", fontSize: 16, fontWeight: "bold" }}> Logout </Text>
+                      </View>
+                    </ListItem>
+                  </List>
+
           </Content>
       </Container>
     );
