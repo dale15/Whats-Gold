@@ -111,8 +111,8 @@ class HomeActivity extends Component {
                 <View style = {{flexDirection: 'row', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                   {this.state.categories.map(cat => (
                         ( (cat.category == "GOLD" || cat.category == "EUR/USD" || cat.category == "WTI CRUDE" || cat.category == "SILVER") &&
-                          <Button
-                              style = {{flex: 1, marginLeft: 5, marginRight: 10, height: 30, backgroundColor: 'transparent'}}
+                          <Button transparent
+                              style = {{flex: 1, marginLeft: 5, marginRight: 10, height: 30, backgroundColor: '#e5be42'}}
                               key = {cat.category}
                               active  = { (cat.category == this.state.selectedTab ? true : false) }
                               onPress = { () => this.setState({selectedTab: cat.category}) }>
@@ -127,12 +127,12 @@ class HomeActivity extends Component {
               <View style = {{flexDirection: 'row', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                   {this.state.categories.map(cat => (
                         ( (cat.category == "DOW JONES" || cat.category == "SPX" || cat.category == "NASDAQ") &&
-                          <Button
-                              style = {{flex: 1, marginLeft: 5, marginRight: 10, height: 30, backgroundColor: 'transparent'}}
+                          <Button transparent
+                              style = {{flex: 1, marginLeft: 5, marginRight: 10, height: 30, backgroundColor: '#e5be42'}}
                               key = {cat.category}
                               active  = { (cat.category == this.state.selectedTab ? true : false) }
                               onPress = { () => this.setState({selectedTab: cat.category}) }>
-                            <Image style = {{flex: 1, position: 'absolute', width: 110}} source = {require('../../components/Images/button_bg.png')} />
+                            <Image style = { {flex: 1, position: 'absolute', width: 110}} source = {require('../../components/Images/button_bg.png')} />
                             <Text style = {{flex: 1, textAlign: 'center', marginTop: 0}}> {cat.category} </Text>
                           </Button>
                         )
@@ -144,7 +144,7 @@ class HomeActivity extends Component {
 
             <View style = {{flex: 1}}>
               {this.state.selectedTab === "GOLD" &&
-                <GoldTab />
+                <GoldTab navigation = {this.props.navigation} />
               }
 
               {this.state.selectedTab === "SILVER" &&
