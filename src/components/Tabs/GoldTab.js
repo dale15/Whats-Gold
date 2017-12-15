@@ -75,7 +75,7 @@ class GoldTab extends Component {
                   selectedIndex = {this.state.selectedIndex}
                   buttons = {buttons}
                   selectedBackgroundColor = 'gold'
-                  textStyle = {{color: '#e5be42'}}
+                  textStyle = {{color: '#e5be42', fontSize: 10}}
                   containerStyle = {{height: 20, width: 340, marginTop: 195, backgroundColor: '#000'}}>
                 </ButtonGroup>
 
@@ -93,31 +93,31 @@ class GoldTab extends Component {
                 style = {{width: 50, height: 29, marginTop: 20, marginLeft: 50}}
                 source = {require('../../components/Images/entry_point.png') } >
                   {this.state.data.map(datas => (
-                      <Text key = {datas.id} style = {{marginLeft: 2, marginTop: 6}}> { datas.entry_point }  </Text>
+                      <Text key = {datas.id} style = {{backgroundColor: 'transparent', marginLeft: 2, marginTop: 6}}> { datas.entry_point }  </Text>
                     ))
                   }
               </ImageBackground>
-              <Text style = {{color: '#fff', marginLeft: 50}}> Entry Point </Text>
+              <Text style = {{backgroundColor: 'transparent', color: '#fff', marginLeft: 50}}> Entry Point </Text>
 
               <ImageBackground
                 style = {{width: 50, height: 29, marginTop: 10, marginLeft: 50}}
                 source = {require('../../components/Images/entry_loss.png') } >
                 {this.state.data.map(datas => (
-                    <Text key = {datas.id} style = {{marginLeft: 5, marginTop: 6}}> { datas.stop_loss }  </Text>
+                    <Text key = {datas.id} style = {{backgroundColor: 'transparent', marginLeft: 5, marginTop: 6}}> { datas.stop_loss }  </Text>
                   ))
                 }
               </ImageBackground>
-              <Text style = {{color: '#fff', marginLeft: 50}}> Stop Loss </Text>
+              <Text style = {{backgroundColor: 'transparent', color: '#fff', marginLeft: 50}}> Stop Loss </Text>
 
               <ImageBackground
                 style = {{width: 50, height: 29, marginTop: 10, marginLeft: 50}}
                 source = {require('../../components/Images/entry_loss.png') } >
                 {this.state.data.map(datas => (
-                    <Text key = {datas.id} style = {{marginLeft: 8, marginTop: 6}}> { datas.profit_target }  </Text>
+                    <Text key = {datas.id} style = {{backgroundColor: 'transparent', marginLeft: 8, marginTop: 6}}> { datas.profit_target }  </Text>
                   ))
                 }
               </ImageBackground>
-              <Text style = {{color: '#fff', marginLeft: 40}}> Profit Target </Text>
+              <Text style = {{backgroundColor: 'transparent', color: '#fff', marginLeft: 40}}> Profit Target </Text>
 
           </ImageBackground>
 
@@ -126,9 +126,9 @@ class GoldTab extends Component {
               style = {{width: 150, height: 200}}
               source = {require('../../components/Images/under_color.png') } >
                 <Image source = {require('../../components/Images/temp_high.png') } style = {{marginLeft: 60}} />
-                <Text style = {{color: '#e5be42', marginLeft: 40}}> Risk Ratio </Text>
-                <Text style = {{color: '#e5be42', marginLeft: 80, marginTop: 20, position: 'absolute',}}> High </Text>
-                <Text style = {{color: '#e5be42', marginLeft: 80, marginTop: 60, position: 'absolute',}}> Low </Text>
+                <Text style = {{backgroundColor: 'transparent', color: '#e5be42', marginLeft: 40}}> Risk Ratio </Text>
+                <Text style = {{backgroundColor: 'transparent', color: '#e5be42', marginLeft: 80, marginTop: 20, position: 'absolute',}}> High </Text>
+                <Text style = {{backgroundColor: 'transparent', color: '#e5be42', marginLeft: 80, marginTop: 60, position: 'absolute',}}> Low </Text>
 
                 {this.state.data.map(datas =>
                   <Button
